@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/greek/lfb
+# catalog-date 2006-10-18 08:58:01 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-lfb
 Version:	1.0
 Release:	1
@@ -111,6 +117,7 @@ schemes.
 %doc %{_texmfdistdir}/doc/fonts/lfb/example.tex
 %doc %{_texmfdistdir}/doc/fonts/lfb/lfb.make
 %doc %{_texmfdistdir}/doc/fonts/lfb/lfbacc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -121,3 +128,5 @@ schemes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
