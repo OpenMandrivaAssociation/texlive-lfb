@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-lfb
 Version:	1.0
-Release:	6
+Release:	7
 Summary:	A Greek font with normal and bold variants
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/lfb
