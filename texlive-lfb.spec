@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/greek/lfb
-# catalog-date 2006-10-18 08:58:01 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-lfb
-Version:	1.0
-Release:	11
+Version:	15878
+Release:	1
 Summary:	A Greek font with normal and bold variants
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/lfb
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lfb.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lfb.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lfb.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lfb.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ texts, making the input text more readable than in some
 schemes.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -111,24 +105,10 @@ schemes.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 753298
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718850
-- texlive-lfb
-- texlive-lfb
-- texlive-lfb
-- texlive-lfb
-
