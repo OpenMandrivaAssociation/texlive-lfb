@@ -1,6 +1,6 @@
 Name:		texlive-lfb
 Version:	15878
-Release:	1
+Release:	2
 Summary:	A Greek font with normal and bold variants
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/lfb
