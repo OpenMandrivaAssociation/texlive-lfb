@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A Greek font with normal and bold variants
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/greek/lfb
+URL:		https://www.ctan.org/tex-archive/fonts/greek/lfb
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lfb.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lfb.doc.r%{version}.tar.xz
